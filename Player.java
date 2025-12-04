@@ -4,7 +4,6 @@
 public class Player {
   
     private String record;    // The player's name and high score formatted as "Name - score"
-  
     /*
      * Sets record to the specified player record
      */
