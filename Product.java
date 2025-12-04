@@ -30,7 +30,7 @@ public class Product {
        * -----------------------------------------------------------------------------
        */
      int index= label.indexOf("$");
-      // int index= label.length()-7;
+      // int index= label.length()-7; 
   
       return  label.substring(index);
     }
