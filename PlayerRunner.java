@@ -9,7 +9,7 @@ public class PlayerRunner {
        * -----------------------------------------------------------------------------
        */
   
-  
+        System.out.println(denise.getScore());
   
       
       
