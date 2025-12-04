@@ -30,7 +30,7 @@ public class Player {
        */
       
       
-      return "";
+      return record.substring(record.indexOf("-" + 2));
     }
     
   }
