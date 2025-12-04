@@ -5,7 +5,7 @@ public class Blog {
 
     private String title;   // The title of a blog post
     private String date;    // The date a blog post was published formatted as MM/DD/YYYY
-  
+    // test push
     /*
      * Sets title to the specified title of the
      * blog post and date to the specified date
