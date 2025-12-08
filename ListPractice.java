@@ -17,7 +17,7 @@ public class ListPractice {
         }
 
         for (String i : myList) {
-            if (i.length() >= 5) {
+            if (i.length() > 5) {
                 System.out.println(i);
             }
         }
