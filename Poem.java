@@ -18,7 +18,7 @@ public class Poem {
         return out;
     }
     
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Poem p = new Poem("Harlem", FileOperator.getStringData("poem"));
         System.out.println(p);
     }
