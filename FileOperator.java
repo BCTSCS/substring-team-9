@@ -26,5 +26,8 @@ public final class FileOperator {
     }
     return result;
   }
+  public static void main(String [] args) {
+    System.out.println(FileOperator.getStringData("poem.txt"));
+  }
 }
 
