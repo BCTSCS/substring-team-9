@@ -60,7 +60,9 @@ class SocialMedia {
     public int postsWithLength(int minLength) {
         int totalCount = 0;
         for (String line : posts) {
-            totalCount += line.length();
+            if (line.length() >= minLength) {
+                totalCount += 1;
+            }
         }
         return totalCount;
     }
@@ -79,6 +81,6 @@ class SocialMedia {
         SocialMedia socialmedia = new SocialMedia("sample1.txt");
         System.out.println(socialmedia.postsWithLength(1));
         // System.out.println(socialmedia.postsWithHashtag("DataScience"));
-        socialmedia.postsWithHashtag("DataScience").stream().forEach(System.out::println);
+        socialmedia.postsWithHashtag("DataScience").forEach(System.out::println);
     }
 }
