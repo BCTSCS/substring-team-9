@@ -21,11 +21,11 @@ class FileOperator {
         return linesList;
     }
 
-    public static void main(String[] args) {
-        ArrayList<String> lines = FileOperator.getStringList("poem.txt");
-        Poem poem = new Poem(lines);
-        System.out.println(poem.toString());
-    }
+    // public static void main(String[] args) {
+    //     ArrayList<String> lines = FileOperator.getStringList("poem.txt");
+    //     Poem poem = new Poem(lines);
+    //     System.out.println(poem.toString());
+    // }
 }
 
 class Poem {
@@ -47,5 +47,38 @@ class Poem {
             }
         }
         return output;
+    }
+}
+
+class SocialMedia {
+    private ArrayList<String> posts;
+
+    public SocialMedia(String filename) {
+        posts = FileOperator.getStringList(filename);
+    }
+
+    public int postsWithLength(int minLength) {
+        int totalCount = 0;
+        for (String line : posts) {
+            totalCount += line.length();
+        }
+        return totalCount;
+    }
+
+    public ArrayList<String> postsWithHashtag(String hashtag) {
+        ArrayList<String> hashtagPostList = new ArrayList<>();
+        for (String line : posts) {
+            if (line.contains("#" + hashtag)) {
+                hashtagPostList.add(line);
+            }
+        }
+        return hashtagPostList;
+    }
+
+    public static void main(String[] args) {
+        SocialMedia socialmedia = new SocialMedia("sample1.txt");
+        System.out.println(socialmedia.postsWithLength(1));
+        // System.out.println(socialmedia.postsWithHashtag("DataScience"));
+        socialmedia.postsWithHashtag("DataScience").stream().forEach(System.out::println);
     }
 }
