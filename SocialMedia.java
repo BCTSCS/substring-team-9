@@ -1,19 +1,27 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
 
 public class SocialMedia {
     private ArrayList<String> posts;
     public SocialMedia(String filename) {
         this.posts = FileOperator.getStringData(filename);
     }
-    public int postsWithLength(int minLength) {
+    public int postWithLength(int minLength) {
         int total = 0;
         return total;
     }
-    public ArrayList<String> postsWithHashtag(String hashtag) {
+    public ArrayList<String> postWithHashtag(String hashtag) {
         ArrayList<String> result = new ArrayList<>();
+        // contains
+        for (String post:posts) {
+            if (post.contains(hashtag)) {
+                result.add(post);
+            }
+        }
         return result;
     }
+    public static void main(String[] args) {
+        SocialMedia camila = new SocialMedia("sample1.txt");
+        System.out.println(camila.postWithHashtag("Java"));
+    }
 }
+
