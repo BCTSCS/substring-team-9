@@ -21,7 +21,9 @@ public class SocialMedia {
     }
     public static void main(String[] args) {
         SocialMedia camila = new SocialMedia("sample1.txt");
+        SocialMedia poluri = new SocialMedia("sample2.txt");
         System.out.println(camila.postWithHashtag("Java"));
+        System.out.println(poluri.postWithHashtag("kyuri"));
     }
 }
 
