@@ -20,10 +20,16 @@ public class SocialMedia {
         return result;
     }
     public static void main(String[] args) {
+        System.out.println("=== TESTING SAMPLE1.TXT ===");
         SocialMedia camila = new SocialMedia("sample1.txt");
-        SocialMedia poluri = new SocialMedia("sample2.txt");
+        System.out.println(camila.postWithLength(50));
+        System.out.println(camila.postWithLength(70));
         System.out.println(camila.postWithHashtag("Java"));
-        System.out.println(poluri.postWithHashtag("kyuri"));
+        System.out.println("=== TESTING SAMPLE2.TXT ===");
+        SocialMedia poluri = new SocialMedia("sample2.txt");
+        System.out.println(poluri.postWithLength(50));
+        System.out.println(poluri.postWithLength(70));
+        System.out.println(poluri.postWithHashtag("Endgame Hype"));
     }
 }
 
